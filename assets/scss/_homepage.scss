@@ -129,7 +129,7 @@ body.home{
     padding: 128px 0;
     .prd-ss-content{
         text-align: center;
-        width: 726px;
+        max-width: 726px;
         margin: 0 auto;
         h2{
             margin: 24px 0 27px;
@@ -455,7 +455,7 @@ body.home{
             width: 100%;
             a{
                 border: 2px solid #292355;
-                padding: 14px 16px;
+                padding: 16px;
                 font-family: 'Sofia Pro';
                 font-weight: 400;
                 font-size: 14px;
@@ -496,6 +496,28 @@ body.home{
     .misson-ss, .prd-ss, .token-ss, .roadmap-ss, .how-to-buy{
         padding: 80px 0;
     }
+    .how-to-buy .__contract {
+        .__left {
+            width: calc(100% - 320px);
+            .__address{
+                justify-content: space-between;
+                position: relative;
+                padding: 19px 24px;
+                .__copy {
+                    position: absolute;
+                    right: 24px;
+                    top: calc(50% - 10px);
+                    span{
+                        left: -8px;
+                    }
+                }
+            }
+        }
+        .__right{
+            max-width: 320px;
+            padding-left: 32px;
+        }   
+    }
 }
 
 @media (max-width: 1024.98px){
@@ -512,6 +534,338 @@ body.home{
             .list-logo{
                 margin-top: 48px;
             }
+        }
+    }
+    .how-to-buy {
+        .wrap-steps{
+            grid-gap: 32px;
+        }
+        .__contract .__left .__address .address_wallet{
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 992.98px){
+    .misson-ss .wrap-mission{
+        &--left{
+            max-width: 50%;
+            width: 100%;
+            padding-right: 32px;
+        }
+        &--right{
+            max-width: 50%;
+            width: 100%;
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+    .token-ss{
+        &--left{
+            max-width: 50%;
+            width: 100%;
+            padding-right: 32px;
+        }
+        &--right{
+            max-width: 50%;
+            width: 100%;
+            .box {
+                h4{
+                    font-size: 18px;
+                }
+                .liquid, .tax, ._total{
+                    padding: 24px;
+                }
+                .contract {
+                    padding: 24px;
+                    .address{
+                        font-size: 12px;
+                    }
+                }
+                ._total ._num, {
+                    font-size: 21px;
+                }
+                .liquid .main, .tax .percent{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .roadmap-ss .wrap-roadmap .wrap-stages .stage{
+        padding: 16px 24px;
+    }
+    .how-to-buy .__contract {
+        align-items: center;
+        flex-direction: column;
+        max-width: 450px;
+        width: 100%;
+        margin: 0 auto;
+        .__left{
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .__address{
+                margin-top: 12px;
+                margin-left: 0;
+                max-width: 500px;
+                width: 100%;
+                .__copy span{
+                    left: -12px;
+                }
+            }
+        }
+        .__right{
+            width: 100%;
+            margin-top: 18px;
+            padding-left: 0;
+        }
+    }
+}
+
+@media (max-width: 767.98px){
+    .hr-ss {
+        padding: 32px 0;
+        .hr-img{
+            height: 130px;
+        }
+        &--content {
+            .__heading{
+                margin: 24px auto;
+                font-size: 36px;
+                line-height: 48px;
+            }
+            .__subheading{
+                max-width: 600px;
+                font-size: 18px;
+                margin: 0 auto 24px;
+            }
+            .cta-group a{
+                padding: 10px 24px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+            .list-logo{
+                margin-top: 24px;
+                max-width: 430px;
+                .item a img{
+                    min-height: 24px;
+                    max-height: 24px;
+                }
+            }
+        }
+    }
+
+    .misson-ss, .prd-ss, .token-ss, .roadmap-ss, .how-to-buy{
+        padding: 48px 0;
+    }
+
+    .misson-ss {
+        .wrap-mission{
+            flex-direction: column;
+            max-width: 590px;
+            margin: 0 auto;
+            &--left{
+                max-width: 100%;
+                padding-right: 0;
+                h2{
+                    margin: 18px 0 0;
+                }
+            }
+            &--right{
+                max-width: 100%;
+                margin-top: 24px;
+                p{
+                    font-size: 14px;
+                    &:not(:last-child){
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .prd-ss {
+        .prd-ss-content{
+            max-width: 590px;
+            h2{
+                margin: 18px 0;
+            }
+            p{
+                font-size: 14px;
+                margin: 0 auto 18px;
+            }
+            a{
+                padding: 10px 24px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+
+    .token-ss{
+        &--wrap{
+            max-width: 590px;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+        &--left {
+            max-width: 100%;
+            padding-right: 0;
+            h2{
+                margin: 18px 0;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+        &--right{
+            max-width: 100%;
+            margin-top: 24px;
+            .box{
+                .tax, ._total, .liquid, .contract{
+                    padding: 16px;
+                }
+                .liquid .main, .tax .percent, ._total ._num{
+                    font-size: 20px;
+                }
+                h4{
+                    font-size: 16px;
+                }
+            } 
+        }
+    }
+
+    .roadmap-ss .wrap-roadmap {
+        max-width: 590px;
+        margin: 0 auto;
+        .heading-ss{
+            margin: 18px 0 24px;
+        }
+        .wrap-stages{
+            flex-direction: column;
+            .stage{
+                width: 100%;
+                padding: 16px;
+                &:not(:last-child){
+                    border-right: none;
+                    border-bottom: 1px solid #251F4E;
+                }
+                .heading{
+                    margin-top: 12px;
+                    font-size: 24px;
+                }
+                .list li{
+                    font-size: 16px;
+                    &:not(:last-child){
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .how-to-buy {
+        .heading-ss{
+            margin: 18px 0;
+        }
+        .wrap-steps{
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 24px;
+            margin-top: 24px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+        }
+        .__contract {
+            .__left .__address{
+                padding: 14px 18px;
+                .address_wallet{
+                    font-size: 14px;
+                }
+                .__copy{
+                    right: 14px;
+                    span{
+                        font-size: 10px;
+                        left: -14px;
+                        bottom: -10px;
+                    }
+                }
+            }
+            .__right a{
+                padding: 10px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 599.98px){
+    .how-to-buy {
+        .wrap-steps{
+            grid-template-columns: 1fr;
+            .step {
+                h4{
+                    margin: 12px 0;
+                }
+                img{
+                    height: 64px;
+                    width: 64px;
+                }
+            }
+        }
+        .__contract .__left .__address .address_wallet{
+            font-size: 12px;
+        }
+    }
+    .hr-ss {
+        .hr-img{
+            height: 80px;
+        }
+        &--content {
+            .__heading{
+                font-size: 24px;
+                line-height: 32px;
+                margin: 18px auto;
+            }
+            .__subheading{
+                font-size: 16px;
+                margin: 0 auto 18px;
+            }
+            .list-logo {
+                padding: 10px;
+                .item a img{
+                    min-height: 20px;
+                    max-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 374.98px){
+    .token-ss--right .box .contract .address,
+    .how-to-buy .__contract .__left .__address .address_wallet{
+        font-size: 10px;
+    }
+
+    .hr-ss{
+        &--content {
+            .list-logo .item{
+                flex-direction: column;
+                a:not(:last-child){
+                    margin-bottom: 8px;
+                }
+            }
+            .cta-group a{
+                padding: 10px 16px;
+                line-height: 100%;
+            }
+        }
+    }
+    .token-ss--right .box{
+        .tax, ._total, .liquid, .contract{
+            padding: 12px;
         }
     }
 }

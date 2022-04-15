@@ -21,12 +21,60 @@
                 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                 if (target.length) {
                     $('html,body').animate({
-                        scrollTop: (target.offset().top)
+                        scrollTop: (target.offset().top) - 48
                     }, 300);
                     return false;
                 }
             }
         });
+
+        $('.toggle-mb').click( function() {
+            $('.main-header').toggleClass('active-mb');
+            $(this).toggleClass('active');
+
+            $('.__primary-menu').slideToggle('fast');
+        });
+
+        $('.__primary-menu li a').click( function( e) {
+            e.preventDefault();
+            $('.main-header').removeClass('active-mb');
+            $('.toggle-mb').removeClass('active');
+
+            $('.__primary-menu').slideUp('fast');
+        });
+
+        if( $(window).scrollTop() > $('.main-header').innerHeight() ){
+            $('.main-header').addClass('sticky');
+        }else{
+            $('.main-header').removeClass('sticky');
+        }
+        $(window).scroll( function() {
+            if( $(window).scrollTop() > $('.main-header').innerHeight() ){
+                $('.main-header').addClass('sticky');
+            }else{
+                $('.main-header').removeClass('sticky');
+            }
+        });
+
+        $(window).resize( function() {
+            if( $(window).width() < 768 ){
+
+                $('a[href*=\\#]:not([href=\\#])').on('click', function(){
+                    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: (target.offset().top)
+                            }, 300);
+                            return false;
+                        }
+                    }
+                });
+
+            }
+        });
+        
     
    });
 })( jQuery );

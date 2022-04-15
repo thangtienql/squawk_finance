@@ -1,7 +1,12 @@
 .main-header{
     padding: 12px 0;
     border-bottom: 1px solid #292355;
-
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    &.sticky{
+        background-color: #0B091A;
+    }
     .wrap{
         display: flex;
         align-items: center;
@@ -62,6 +67,103 @@
                 color: #FFFFFF;
                 display: block;
             }
+            .toggle-mb{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px){
+    .main-header .wrap {
+        .__primary-menu .menu-container ul li:not(:last-child){
+            margin-right: 16px;
+        }
+        .__cta-button a{
+            padding: 12px 14px;
+        }
+    }
+}
+
+@media (max-width: 767.98px){
+    .main-header {
+        .wrap{
+            .__primary-menu{
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 73px;
+                background-color: #0B091A;
+                width: 100%;
+                z-index: 99;
+                .menu-container ul{
+                    flex-direction: column;
+                    li{
+                        &:not(:last-child){
+                            margin-right: 0;
+                        }
+                        a{
+                            width: 100%;
+                            padding: 16px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            .__cta-button {
+                display: flex;
+                align-items: center;
+                .toggle-mb{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 24px;
+                    height: 24px;
+                    cursor: pointer;
+                    margin-left: 12px;
+                    position: relative;
+                    &.active{
+                        span{
+                            position: absolute;
+                            left: 0;
+                            top: calc(50% - 1px);
+                            &:nth-child(1){
+                                transform: rotate(45deg);
+                            }
+                            &:nth-child(2){
+                                display: none;
+                            }
+                            &:nth-child(3){
+                                transform: rotate(-45deg);
+                            }
+                        }
+                    }
+                    span{
+                        width: 100%;
+                        height: 2px;
+                        display: block;
+                        background-color: #fff;
+                        transition: .3s ease all;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 599.98px){
+    .main-header .wrap {
+        .__site-logo a img{
+            height: 24px;
+        }
+        .__primary-menu{
+            top: 61px;
+        }
+        .__cta-button a{
+            padding: 10px;
+            font-size: 12px;
+            line-height: 16px;
         }
     }
 }

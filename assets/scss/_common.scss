@@ -29,3 +29,19 @@
         font-size: 48px;
     }
 }
+
+@media (max-width: 992.98px){
+    .heading-ss {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .label{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .heading-ss{
+        font-size: 32px;
+    }
+}
