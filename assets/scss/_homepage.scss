@@ -477,3 +477,41 @@ body.home{
         }
     }
 }
+
+@media (max-width: 1200.98px){
+    .hr-ss{
+        &--content {
+            .hr-img{
+                height: 200px;
+            }
+            .__heading{
+                font-size: 56px;
+                margin: 48px auto 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100.98px){
+    .misson-ss, .prd-ss, .token-ss, .roadmap-ss, .how-to-buy{
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 1024.98px){
+    .hr-ss{
+        padding: 64px 0;
+        .hr-img{
+            height: 180px;
+        }
+        &--content {
+            .__heading{
+                font-size: 48px;
+                margin: 36px auto 32px;
+            }
+            .list-logo{
+                margin-top: 48px;
+            }
+        }
+    }
+}
