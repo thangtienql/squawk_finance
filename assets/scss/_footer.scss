@@ -1,0 +1,95 @@
+.main-footer{
+    border-top: 1px solid #292355;
+    .top-footer{
+        background-image: url(../images/blur-bg.png);
+        background-color: #121028;
+        background-position: center 170px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        padding-top: 96px;
+        h2{
+            font-family: 'Sofia Pro';
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 110.5%;
+            text-align: center;
+            letter-spacing: -0.05em;
+            color: #FFFFFF;
+            margin: 0 0 32px;
+        }
+        .list-social{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 70px;
+            a{
+                display: block;
+                &:not(:last-child){
+                    margin-right: 24px;
+                }
+                img{
+                    display: block;
+                    height: 32px;
+                    width: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+        .img-ft{
+            display: block;
+            margin: 0 auto;
+            width: 294px;
+            height: auto;
+        }
+    }
+
+    .bottom-footer{
+        padding: 48px 0;
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .__left{
+            display: flex;
+            align-items: center;
+            a{
+                display: block;
+                img{
+                    height: 27px;
+                    width: auto;
+                    display: block;
+                }
+            }
+            .copyright{
+                font-family: 'Graphik';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #ABA7CB;
+                margin-left: 12px;
+            }
+        }
+        .__right{
+            a{
+                position: relative;
+                font-family: 'Graphik';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #ABA7CB;
+                text-decoration: none;
+                transition: .3s ease all;
+                &:hover{
+                    color: #fff;
+                }
+                &:not(:last-child){
+                    margin-right: 20px;
+                    padding-right: 20px;
+                    border-right: 1px solid #34384C;
+                }
+            }
+        }
+    }
+}

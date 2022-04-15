@@ -1,0 +1,65 @@
+.main-header{
+    padding: 12px 0;
+    border-bottom: 1px solid #292355;
+
+    .wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        .__site-logo{
+            a{
+                img{
+                    height: 32px;
+                    display: block;
+                }
+            }
+        }
+
+        .__primary-menu .menu-container{
+            ul{
+                list-style: none;
+                margin: 0 ;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                li{
+                    &:not(:last-child){
+                        margin-right: 40px;
+                    }
+                    a{
+                        font-family: 'Sofia Pro';
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 14px;
+                        letter-spacing: 0.18em;
+                        text-transform: uppercase;
+                        color: #C8C6DD;
+                        text-decoration: none;
+                        display: block;
+                        transition: .3s ease all;
+                        &:hover{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .__cta-button{
+            a{
+                background: #4733CA;
+                padding: 12px 24px;
+                font-family: 'Sofia Pro';
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 24px;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #FFFFFF;
+                display: block;
+            }
+        }
+    }
+}
