@@ -88,6 +88,7 @@
         $('.header-main').removeClass('active-mb');
         $('body').removeClass('not-scroll');
         $('.__primary-menu').slideUp();
+        $('.toggle-mb').removeClass('active');
         }
 
     });
