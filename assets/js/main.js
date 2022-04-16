@@ -58,8 +58,7 @@
                 $('.main-header').removeClass('sticky');
             }
         });
-
-        $(window).resize( function() {
+        $(window).on('rezise load', function() {
             if( $(window).width() < 768 ){
 
                 $('a[href*=\\#]:not([href=\\#])').on('click', function(){
@@ -81,6 +80,9 @@
                 });
 
             }
+        });
+        $(window).resize( function() {
+            
         });
         
     
