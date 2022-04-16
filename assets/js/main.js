@@ -1,6 +1,7 @@
 (function( $ ){
    $(document).ready( function() {
 
+        //Copy Address
        $('.__contract .__address .__copy').click( function() {
             var $temp = $("<input>");
             $("body").append($temp);
@@ -66,13 +67,17 @@
                         var target = $(this.hash);
                         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                         if (target.length) {
-                            $('.__primary-menu').slideUp('fast');
                             $('html,body').animate({
                                 scrollTop: (target.offset().top) - 48
                             }, 300);
                             return false;
                         }
                     }
+                });
+
+                $('.__primary-menu li a').click( function( e) {
+                    e.preventDefault();
+                    $('.__primary-menu').slideUp('fast');
                 });
 
             }
