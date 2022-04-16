@@ -77,7 +77,7 @@
 
                 $('.__primary-menu li a').click( function( e) {
                     e.preventDefault();
-                    $('.__primary-menu').slideUp('fast');
+                    $('.__primary-menu').slideUp();
                 });
 
             }
